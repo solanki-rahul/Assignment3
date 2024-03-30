@@ -70,7 +70,7 @@ namespace Assignment3.Controllers
                 }
             }
 
-            return NoContent();
+            return Ok("Cart Updated successfully");
         }
 
         // POST: api/Carts
@@ -97,7 +97,7 @@ namespace Assignment3.Controllers
             _context.Cart.Remove(cart);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok("Cart Deleted");
         }
 
         private bool CartExists(int id)

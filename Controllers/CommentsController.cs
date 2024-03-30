@@ -70,7 +70,7 @@ namespace Assignment3.Controllers
                 }
             }
 
-            return NoContent();
+            return Ok("Comment Updated successfully");
         }
 
         // POST: api/Comments
@@ -97,7 +97,7 @@ namespace Assignment3.Controllers
             _context.Comment.Remove(comment);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok("Comment Deleted");
         }
 
         private bool CommentExists(int id)

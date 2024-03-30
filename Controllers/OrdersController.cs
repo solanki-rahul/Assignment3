@@ -70,7 +70,7 @@ namespace Assignment3.Controllers
                 }
             }
 
-            return NoContent();
+            return Ok("Order Updated successfully");
         }
 
         // POST: api/Orders
@@ -97,7 +97,7 @@ namespace Assignment3.Controllers
             _context.Order.Remove(order);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok("Order Deleted");
         }
 
         private bool OrderExists(int id)

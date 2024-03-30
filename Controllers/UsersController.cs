@@ -70,7 +70,7 @@ namespace Assignment3.Controllers
                 }
             }
 
-            return NoContent();
+            return Ok("User Updated successfully");
         }
 
         // POST: api/Users
@@ -97,7 +97,7 @@ namespace Assignment3.Controllers
             _context.User.Remove(user);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok("User Deleted");
         }
 
         private bool UserExists(int id)

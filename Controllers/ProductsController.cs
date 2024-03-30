@@ -65,7 +65,7 @@ namespace Assignment3.Controllers
                 }
             }
 
-            return NoContent();
+            return Ok("Product Updated successfully");
         }
 
         // POST: api/Products
@@ -92,7 +92,7 @@ namespace Assignment3.Controllers
             _context.Product.Remove(product);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok("Product Deleted");
         }
 
         private bool ProductExists(int id)
